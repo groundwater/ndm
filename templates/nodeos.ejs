@@ -1,6 +1,8 @@
 {
-  "cwd" : <%- JSON.stringify(workingDirectory) %>,
-  "envs": <%- JSON.stringify(env, null, 2) %>,
-  "exec": <%- JSON.stringify(nodeBin) %>,
-  "args": <%- JSON.stringify(startScript.concat(flatArgs)) %>
+  "tasks": [{
+    "cwd" : <%- JSON.stringify(workingDirectory) %>,
+    "envs": <%- JSON.stringify(env, null, 2) %>,
+    "exec": <%- JSON.stringify(nodeBin) %>,
+    "args": <%- JSON.stringify([].concat(startScript.concat(flatArgs))) %>
+  }]
 }
